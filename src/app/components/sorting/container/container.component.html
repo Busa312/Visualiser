@@ -1,0 +1,14 @@
+<section class="flex ai-c dir-col jc-c">
+  <div class="container">
+    <ng-container *ngFor="let val of arr">
+      <app-bar [height]="val*5" [isSorted]="isSorted.value"></app-bar>
+    </ng-container>
+  </div>
+  <div class="buttons flex">
+    <button (click)="revert()">invert</button>
+    <button (click)="mergeSort()">Merge Sort</button>
+    <button (click)="quickSortHelper()">quick Sort</button>
+    <button (click)="selectionSort()">selection Sort</button>
+  </div>
+</section>
+

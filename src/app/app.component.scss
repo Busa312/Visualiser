@@ -1,0 +1,32 @@
+@use 'palette' as *;
+
+.navbar {
+  height: 40px;
+  margin-bottom: 30px;
+  color: $text;
+  background-color: $accent;
+  justify-content: flex-end;
+  padding: 20px 50px;
+  div {
+    width: 150px;
+    p {
+      position: relative;
+      &:hover, &.active {
+        &:after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          top: 25px;
+          background-color: $secondary-button;
+          height: 3px;
+          left: 0;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+section {
+  background: $background;
+}

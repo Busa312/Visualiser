@@ -1,0 +1,16 @@
+<section class="flex dir-col jc-c ai-c">
+  <table>
+    <tr *ngFor="let row of twoDArray;let i = index">
+      <td *ngFor="let cell of row;let j = index">
+        <app-cell [point]="cell" [row]="i" [col]="j" (clicked)="onPointClick($event)"></app-cell>
+      </td>
+    </tr>
+  </table>
+  <div class="buttons flex">
+    <button [disabled]="!canModify.value" [ngClass]="{'active' : mode.value === Mode.startPoint}" (click)="mode.next(Mode.startPoint)">Start Point</button>
+    <button [disabled]="!canModify.value" [ngClass]="{'active' : mode.value === Mode.endPoint}" (click)="mode.next(Mode.endPoint)">end Point</button>
+    <button [disabled]="!canModify.value" [ngClass]="{'active' : mode.value === Mode.wall}" (click)="mode.next(Mode.wall)">wall</button>
+    <button [disabled]="!canModify.value" (click)="generateLabyrinth(twoDArray)">populate</button>
+    <button [disabled]="!canModify.value" (click)="findPath(twoDArray)">solve</button>
+  </div>
+</section>

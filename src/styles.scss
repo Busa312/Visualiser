@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@use "src/app/palette" as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $background;
+}
+.flex {
+  display: flex;
+  &.jc-c {
+    justify-content: center;
+  }
+
+  &.ai-c {
+    align-items: center;
+  }
+
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.dir-col {
+    flex-direction: column;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-button;
+  color: white;
+  &:hover {
+    color: $text;
+    background-color: $secondary-button;
+    border: 1px solid $primary-button;
+    cursor: pointer;
+  }
+}

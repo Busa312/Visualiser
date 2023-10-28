@@ -1,0 +1,15 @@
+@use '../../../palette' as *;
+table {
+  background: $primary-button;
+  margin-bottom: 20px;
+}
+
+.active {
+  color: $text;
+  background-color: $secondary-button;
+  border: 1px solid $primary-button;
+}
+
+.buttons {
+  gap: 16px;
+}

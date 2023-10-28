@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+  border: 1px solid black;
+  padding: 5px 10px 0;
+  min-width: 995px;
+  min-height: 495px;
+}
+
+.buttons {
+  gap: 10px
+}
